@@ -2,52 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- My Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
-    <!-- My Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-    <!-- My CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <title>To Do List</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- My Icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+   <!-- My Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <!-- My CSS -->
+   <link rel="stylesheet" href="style.css">
+   <title>To Do List</title>
 </head>
 
 <body>
-    <div class="hero">
-        <h1>Todo App</h1>
-        <p>What's your plan?</p>
-    </div>
-    <div class="container">
-        <div class="container">
-            <div class="todo-box">
-                <div class="inputField">
-                    <input type="text" placeholder="Add your new todo">
-                    <button><i class="bi bi-plus-lg"></i></button>
-                </div>
-                <ul class="todoList">
-                    <li>Beli laptop baru <span><i class="bi bi-trash-fill"></i></span></li>
-                    <li>Mengerjakan tugas ARC <span><i class="bi bi-trash-fill"></i></span></li>
-                    <li>Belajar javascript <span><i class="bi bi-trash-fill"></i></span></li>
-                    <li>Olahraga <span><i class="bi bi-trash-fill"></i></span></li>
-                </ul>
-                <div class="footer">
-                    <span>You have 4 pending tasks</span>
-                    <button>Clear All</button>
-                </div>
+   <div class="hero">
+      <h1>Todo App</h1>
+      <p>What's your plan?</p>
+   </div>
+   <div class="container">
+      <div class="container">
+         <div class="todo-box">
+            <form class="inputField">
+               <input type="text" placeholder="Add your new task" id="todoInput">
+               <button onclick="add()"><i class="bi bi-plus-lg"></i></button>
+            </form>
+
+            <ul id="todoList">
+               <li> <span>Beli laptop baru</span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
+                     class="bi bi-pencil-fill btn-edit"></i>
+               </li>
+               <li> <span> Mengerjakan tugas ARC </span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
+                     class="bi bi-pencil-fill btn-edit"></i>
+               </li>
+               <li> <span>Belajar javascript </span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
+                     class="bi bi-pencil-fill btn-edit"></i>
+               </li>
+               <li> <span>Olahraga </span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
+                     class="bi bi-pencil-fill btn-edit"></i></li>
+            </ul>
+            <div class="footer">
+               <span>You have 4 pending tasks</span>
+               <button>Clear All</button>
             </div>
-        </div>
-    </div>
-
-
-    <script src="app.js"></script>
+         </div>
+      </div>
+   </div>
+   <script src="app.js"></script>
 </body>
 
 </html>

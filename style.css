@@ -47,10 +47,11 @@
     width: 100%;
     height: 100%;
     border: 1px solid #ccc;
-    font-size: 12px;
+    font-size: 13px;
     border-radius: 3px;
     padding-left: 15px;
     outline: none;
+    color: #333;
 
 }
 
@@ -74,12 +75,12 @@
     pointer-events: auto;
 }
 
-.todo-box .todoList {
+.todo-box #todoList {
     max-height: 250px;
     overflow-y: auto;
 }
 
-.todoList li {
+#todoList li {
     list-style: none;
     height: 45px;
     font-size: 13px;
@@ -90,9 +91,10 @@
     padding: 0 15px;
     position: relative;
     overflow: hidden;
+    color: #333;
 }
 
-.todoList li span {
+#todoList li span i.btn-hapus {
     width: 40px;
     font-size: 13px;
     text-align: center;
@@ -100,14 +102,35 @@
     right: -45px;
     color: white;
     background-color: red;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px;
     cursor: pointer;
     transition: all 0.3s ease;
 
 }
 
-.todoList li:hover span {
+#todoList li:hover span i.btn-hapus{
     right: 0;
+}
+#todoList li i.btn-edit {
+    width: 40px;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    right: -45px;
+    color: white;
+    background-color: #32CD32;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+#todoList li:hover i.btn-edit {
+    right: 45px;
+}
+
+.done {
+    text-decoration: line-through;
+    cursor: pointer;
 }
 
 .todo-box .footer {
@@ -117,6 +140,7 @@
     margin-top: 25px;
     justify-content: space-between;
     align-items: center;
+    color: #333;
 }
 
 .todo-box button {
@@ -146,8 +170,8 @@
 
     .inputField input,
     .inputField button,
-    .todoList li,
-    .todoList li span,
+    #todoList li,
+    #todoList li span,
     .todo-box .footer,
     .todo-box button {
         font-size: 16px;
