@@ -24,27 +24,16 @@
    <div class="container">
       <div class="container">
          <div class="todo-box">
-            <form class="inputField">
+            <form action='#' class="inputField">
                <input type="text" placeholder="Add your new task" id="todoInput">
-               <button onclick="add()"><i class="bi bi-plus-lg"></i></button>
+               <button onclick="add()"><i class="bi bi-plus-lg" id=btnInput></i></button>
             </form>
 
             <ul id="todoList">
-               <li> <span>Beli laptop baru</span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
-                     class="bi bi-pencil-fill btn-edit"></i>
-               </li>
-               <li> <span> Mengerjakan tugas ARC </span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
-                     class="bi bi-pencil-fill btn-edit"></i>
-               </li>
-               <li> <span>Belajar javascript </span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
-                     class="bi bi-pencil-fill btn-edit"></i>
-               </li>
-               <li> <span>Olahraga </span> <span><i class="bi bi-trash-fill btn-hapus"></i></span><i
-                     class="bi bi-pencil-fill btn-edit"></i></li>
             </ul>
+
             <div class="footer">
-               <span>You have 4 pending tasks</span>
-               <button>Clear All</button>
+               <p>Click your task when it's done</p>
             </div>
          </div>
       </div>

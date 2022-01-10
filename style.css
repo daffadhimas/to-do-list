@@ -30,7 +30,7 @@
     position: relative;
     margin: 0 auto;
     padding: 25px;
-    top: -100px;
+    top: -90px;
     box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.3),
         5px 5px 5px rgba(0, 0, 0, 0.2),
         15px 15px 15px rgba(0, 0, 0, 0.2)
@@ -74,6 +74,9 @@
     opacity: 1;
     pointer-events: auto;
 }
+.inputField button.active:hover {
+    opacity: .8;
+}
 
 .todo-box #todoList {
     max-height: 250px;
@@ -93,6 +96,12 @@
     overflow: hidden;
     color: #333;
 }
+#todoList li .taskList {
+    cursor: pointer;
+}
+#todoList li .taskList:hover {
+    opacity: .8;
+}
 
 #todoList li span i.btn-hapus {
     width: 40px;
@@ -106,6 +115,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
 
+}
+
+#todoList li span i.btn-hapus:hover{
+    opacity: .8;
 }
 
 #todoList li:hover span i.btn-hapus{
@@ -126,11 +139,16 @@
 }
 #todoList li:hover i.btn-edit {
     right: 45px;
+
+}
+#todoList li span i.btn-edit:hover {
+    opacity: .8;
 }
 
 .done {
     text-decoration: line-through;
     cursor: pointer;
+    opacity: .8;
 }
 
 .todo-box .footer {
@@ -154,6 +172,13 @@
     outline: none;
     padding: 6px 10px;
 }
+.footer p {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 13px;
+    opacity: 0.6;
+}
 
 @media (min-width: 992px) {
     .hero h1 {
@@ -165,7 +190,7 @@
     }
 
     .todo-box {
-        width: 450px;
+        width: 600px;
     }
 
     .inputField input,

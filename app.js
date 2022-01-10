@@ -1,10 +1,12 @@
 // Mengambil semua elemen yang dibutuhkan
-const inputBox = document.querySelector('.inputField input');
+const todoInput = document.querySelector('.inputField input');
 const addBtn = document.querySelector('.inputField button');
+const todo = document.getElementById('todoList')
+
 
 // Membuat hover to do list
-inputBox.onkeyup = () => {
-    let userData = inputBox.value; // Mengambil data user
+todoInput.onkeyup = () => {
+    let userData = todoInput.value; // Mengambil data user
     if (userData.trim() != 0) {
         addBtn.classList.add('active'); //Input akan aktif jika input tidak kosong
     } else {
@@ -12,30 +14,30 @@ inputBox.onkeyup = () => {
     }
 }
 
-const todo = document.getElementById('todoList')
 // Function add
 function add() {
-    // Ambil nilai dari input
-    let todoInput = document.getElementById('todoInput')
 
     // Tambah list ke dalam ul
-    let newTask = "<li> <span onclick='toggle(this)'>" + todoInput.value + "</span>" + "<span onclick='removeItem(this)'> <i class='bi bi-trash-fill btn-hapus'></i> </span>" + "<span> <i class='bi bi-pencil-fill btn-edit'></i> </span>" + "</li>"
+    let newTask = "<li> <span onclick='toggle(this)' class='taskList'>" + todoInput.value + "</span>" + "<span onclick='removeItem(this)'> <i class='bi bi-trash-fill btn-hapus'></i> </span>" + "</li>"
 
     todo.insertAdjacentHTML('afterbegin', newTask)
 
     // Mengosongkan field
     todoInput.value = ""
 
-    function toggle(el) {
-        el.classList.toggle('done')
-    }
-
-    function removeItem(el) {
-        el.parentElement.remove()
-    }
 }
-// Function edit
+// Function hapus satu item
+function removeItem(el) {
+    el.parentElement.remove()
+}
 
+// Function coret
+function toggle(el) {
+    el.classList.toggle('done')
+}
 
-
-// Function hapus
+// Function edit item 
+function editItem(el) {
+    var el = prompt("Edit");
+    el.add()
+}
