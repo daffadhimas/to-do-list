@@ -95,6 +95,7 @@
     position: relative;
     overflow: hidden;
     color: #333;
+    cursor: pointer;
 }
 #todoList li .taskList {
     cursor: pointer;
@@ -127,7 +128,6 @@
 
 .done {
     text-decoration: line-through;
-    cursor: pointer;
     opacity: .8;
 }
 

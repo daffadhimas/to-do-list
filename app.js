@@ -18,7 +18,7 @@ todoInput.onkeyup = () => {
 function add() {
 
     // Tambah list ke dalam ul
-    let newTask = "<li> <span onclick='toggle(this)' class='taskList'>" + todoInput.value + "</span>" + "<span onclick='removeItem(this)'> <i class='bi bi-trash-fill btn-hapus'></i> </span>" + "</li>"
+    let newTask = "<li onclick='toggle(this)'> <span class='taskList'>" + todoInput.value + "</span>" + "<span onclick='removeItem(this)'> <i class='bi bi-trash-fill btn-hapus'></i> </span>" + "</li>"
 
     todo.insertAdjacentHTML('afterbegin', newTask)
 
