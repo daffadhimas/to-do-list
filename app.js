@@ -36,8 +36,3 @@ function toggle(el) {
     el.classList.toggle('done')
 }
 
-// Function edit item 
-function editItem(el) {
-    var el = prompt("Edit");
-    el.add()
-}
